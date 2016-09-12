@@ -1,0 +1,595 @@
+@import "bourbon/bourbon"
+$main_color: #c0301c
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	input,
+	textarea,
+	button
+		outline: none
+	overflow-x: hidden
+	font-family: "RobotoSlab-Regular", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	color: #555
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	a
+		outline: none !important
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+.btn
+	background-color: transparent
+	padding: 15px 35px
+	border: 1px solid
+	color: white
+	font-family: "Montserrat-Regular", sans-serif
+	font-size: 16px
+	text-transform: uppercase
+	border-radius: 3px
+	&.btn_white
+		color: #fff
+		border-color: #fff
+		&:hover
+			background-color: #FFF
+			color: $main_color
+			border-color: #fff
+		text-decoration: none
+
+	&.btn_dark
+		color: #555
+		border-color: #555
+		&:hover
+			background-color: $main_color
+			color: #fff
+			border-color: $main_color
+		text-decoration: none
+.s_dark
+	color: #fff
+.hidden
+	display: none
+section, 
+footer
+	padding: 100px 0
+h1
+	font-size: 48px
+
+h1,h2,h3,h4
+	font-family: "Montserrat-Regular", sans-serif
+	text-transform: uppercase	
+header
+	padding-top: 20px
+	height: 770px
+	background-image: url("../img/header_bg.jpg")
+	background-position: top center
+	box-shadow:0 0 0 800px rgba(0, 0, 0, 0.45) inset
+	.top_line
+		+transition(all 0.35s ease)
+		.main_mnu_button
+			position: absolute
+			top: 0
+			right: 0
+			border:none
+			display: block
+			background-color: transparent
+			font-size: 26px
+			color: #fff
+			padding: 8px 15px 0
+		.top_line_content
+			position: relative
+		&.default
+			width: 100%
+		&.fixed
+			top: 0
+			padding-top: 3px
+			left: 0
+			position: fixed
+			width: 100%
+			background-color: #fff
+			border-bottom: 2px #ddd solid
+			z-index: 2
+			.main_mnu_button
+			 color: #555
+			.top_logo
+				a
+					color: #555
+			.top_nav
+				li
+					a
+						color: #555
+						&.mPS2id-highlight
+							color: $main_color
+		.top_logo
+			padding-top: 6px
+			float: left
+			display: inline-block
+			a
+				font-family: "Montserrat-Bold", sans-serif
+				font-size: 24px
+				color: #fff
+				text-decoration: none
+		
+		.top_nav
+			.top_mnu
+				display: inline-block
+			float: right
+			display: inline-block
+			li
+				display: inline-block
+				margin-left: 30px
+				a
+					color: #fff
+					font-family: "Montserrat-Regular", sans-serif
+					text-decoration: none
+					
+	.header_tittle
+		text-align: center
+		vertical-align: middle
+		margin-top: 250px
+		h1
+			margin-bottom: 25px
+			+animation-delay(.6s)
+		p
+			font-size: 20px
+			margin-bottom: 65px
+			+animation-delay(1.2s)
+
+section, 
+footer
+	.section_header
+		text-align: center
+		margin-bottom: 70px
+		h2
+			font-size: 20px
+			font-weight: normal
+		.s_descr_wrap
+			position: relative
+			margin-top: 60px
+			font-size: 16px
+			margin-bottom: 0
+			&::before
+				content: ""
+				position: absolute
+				height: 2px
+				width: 50px
+				left: 50%
+				margin-left: -27px
+				margin-top: -30px
+				background-color: #555
+
+.s_services
+	.section_content
+		.item_service
+			width: 100%
+			height: 220px
+		.item_service_wrap
+			&:nth-child(2)
+				span
+					background-position: -105px 0
+			&:nth-child(3)
+				span
+					background-position: -210px 0
+			span
+				display: block
+				width: 90px
+				height: 90px
+				background-image: url("../img/iconsed.png")
+				background-repeat: no-repeat
+				margin: 0 auto 30px auto
+			.item_serv_descr
+				text-align: center
+				h4
+					font-size: 14px
+					margin-bottom: 20px
+					font-weight: normal
+				p
+					margin: 0
+					padding: 0
+					
+.s_about
+	background-color: #f8f8f8
+	.sect_inf
+		margin-bottom: 70px
+	.owl-carousel
+		position: relative
+		.about_item
+			text-align: center
+		.about_img_wrapper
+			width: 250px
+			height: 250px
+			overflow: hidden
+			position: relative
+			margin: auto
+			&:hover
+				.img_descr
+					opacity: 1
+					.img_icons
+							bottom: 30px
+			.img_descr
+				z-index: 1
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(0,0,0,.5)
+				opacity: 0
+				transition: all .5s ease
+				.img_icons
+					+transition(all .5s ease)
+					ul,li
+						list-style-type: none
+						padding: 0
+						margin: 0
+					li
+						display: inline-block
+						width: 28px
+						height: 28px
+						padding-top: 2px
+						transition: all .2s
+						cursor: pointer
+						&:last-child a
+							text-decoration: none
+							font-weight: bold
+							font-family: "Montserrat-Regular"
+							font-style: normal
+						&:hover
+							background-color: $main_color
+					position: inherit
+					right: 69px
+					bottom: 0px
+					a
+						font-size: 16px
+						line-height: 25px
+						background-color: transparent
+						color: #fff
+						width: 28px
+						height: 28px
+		.about_descr_wrap
+			position: relative
+			left: -20px
+		h4
+			font-size: 14px
+			margin-bottom: 20px
+			font-weight: normal
+			margin-bottom: 5px
+		.person_descr
+			font-size: 13px
+		.owl-nav
+			div
+				color: #fff
+				font-size: 25px
+				width: 35px
+				height: 40px
+				position: absolute
+				top: 105px
+				background-color: rgba(0,0,0,.3)
+				text-align: center
+				line-height: 40px
+				opacity: .5
+				&:hover
+					background-color: $main_color
+					opacity: 1
+				&.owl-prev
+					left: 18px
+				&.owl-next
+					right: 18px
+.s_works
+	ul,li
+		list-style-type: none
+		padding: 0
+		li
+			display: inline-block
+			margin-left: 20px
+			cursor: pointer
+			font-size: 16px
+			&.active
+				color: $main_color
+	#works_grid
+		.mix
+			display: none
+			margin: 0
+			position: relative
+			text-align: center
+			padding: 15px
+			.img_wrapper
+				position: relative
+				overflow: hidden
+				&:hover .work_item_cont
+					opacity: 1
+					padding-top: 25%
+				img
+					max-width: 100%
+					max-height: 100%
+			.work_item_cont
+				color: #e9bfba
+				h3
+					text-transform: none
+					font-family: "Montserrat-Regular", sans-serif
+					font-weight: normal
+					font-size: 18px
+					margin-bottom: 10px
+				p
+					margin-bottom: 30px
+					font-size: 12px
+					padding: 0
+				a
+					padding: 10px 20px
+					text-transform: uppercase
+					text-decoration: none
+					background-color: #fff
+					border: 1px solid #fff
+					color: $main_color
+					span
+						font-size: 18px
+						padding-left: 2px
+				background-color: rgba(#c0301c,.7)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0
+				text-align: center
+				padding-top: 15%
+				transition: all .5s
+
+.work_item_descr
+	background-color: rgba(#c0301c,.9)
+	border-radius: 10px
+	color: #e9bfba
+	max-width: 380px
+	text-align: center
+	margin: auto
+	padding: 5px 0
+	position: relative
+	.mfp-close
+		color: #e9bfba
+	img
+		width: 100%	
+.s_line
+	padding-top: 90px
+	text-align: center
+	min-height: 370px
+	background-image: url("../img/s_line_bg.jpg")
+	background-position: top center
+	background-size: cover
+	box-shadow: 0 0 0 800px rgba(#c0301c, 0.6) inset
+	h2
+		width: 500px
+		margin: 0 auto 50px 
+		padding: 0
+		text-transform: none
+		font-family: "RobotoSlab-Regular",sans-serif
+		font-weight: normal
+		font-size: 30px
+		color: #fff
+		span
+				text-transform: uppercase
+
+.s_blog
+	.s_blog_item
+		border-bottom: 1px #dddddd solid
+		padding: 40px 0
+		&:first-child
+			padding-top: 0
+		&:last-child
+			border: none
+			padding-bottom: 0
+	.img_blog_wrap
+		overflow: hidden
+		img
+			max-height: 100%
+			max-width: 100%
+	.blog_content_wrap
+		.date
+			display: inline-block
+			width: 75px
+			height: 75px
+			border: 2px #555 solid
+			text-transform: uppercase
+			font-size: 24px
+			font-family: "Montserrat-Bold",sans-serif
+			text-align: center
+			line-height: 20px
+			padding-top: 17px
+			color: #777
+			span
+				font-size: 14px
+		.blog_title
+			display: inline-block
+			margin-left: 20px
+			h3
+				font-size: 16px
+				font-weight: normal
+				color: #c0301c
+				margin-bottom: 8px
+			small
+				font-size: 13px
+				font-style: italic
+				span
+					color: #c0301c
+		p
+			margin: 25px 0 35px
+		a
+			text-transform: uppercase
+			color: #c0301c
+			text-decoration: none
+			font-weight: bold
+			letter-spacing: 1px
+
+.s_clients
+	background-color: #f8f8f8
+	.client_img
+		text-align: center
+		margin-bottom: 70px
+	.client_img_wrapper
+		padding: 0 30px 20px
+		display: inline-block
+	.clients_descr
+		text-align: center
+		p
+			margin: 0 auto
+			font-size: 18px
+			font-style: italic
+			padding-bottom: 35px
+			max-width: 800px
+		strong
+			margin: 0
+			font-weight: normal
+			font-size: 20px
+	.clients_carousel
+		.owl-dots
+			width: 100%
+			margin-top: 40px
+			text-align: center
+			.owl-dot
+				width: 13px
+				height: 13px
+				background-color: #dddddd
+				display: inline-block
+				margin: 0 4px
+				border-radius: 50%
+				&.active
+					background-color: $main_color
+
+.s_contacts
+	.contact_box
+		margin-bottom: 40px
+	.contacts_icon
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+		font-size: 17px
+		top: -4px
+	.contacts_inf
+		display: inline-block
+		h3
+			margin: 0
+			font-size: 14px
+			font-weight: normal
+			margin-bottom: 12px
+		p
+			margin: 0
+			font-size: 12px
+	.main_form
+		button
+			font-size: 12px
+			border-radius: 0
+		label
+			margin-left: 40px
+			font-size: 12px
+			span
+				color: $main_color
+
+footer
+	background-color: $main_color
+	.section_header
+		color: #fff
+		margin: 0
+		ul,li
+			list-style-type: none
+			padding: 0
+			li
+				display: inline-block
+				width: 35px
+				height: 35px
+				border-radius: 50%
+				border: 2px #fff solid
+				text-align: center
+				padding: 4px 0 0 1px
+				margin-right: 15px
+				transition: all .2s
+				&:hover
+					background-color: #fff
+					border-color: #fff
+					cursor: pointer
+					a
+						color: $main_color
+				a
+					color: #fff
+		.s_descr_wrap
+			font-size: 12px
+			text-transform: uppercase
+			&::before
+				background-color: #FFF
+
+
+input,
+textarea
+	box-shadow: none
+	font-size: 12px
+	width: 100%
+	margin-bottom: 20px
+	text-indent: 12px
+	line-height: 40px
+	border: 1px solid #555
+	&::-moz-placeholder
+		text-transform: uppercase
+	&::-webkit-placeholder
+		text-transform: uppercase
+	&:-moz-placeholder
+		text-transform: uppercase 
+	&:-ms-input-placeholder
+		text-transform: uppercase
+	&:focus
+		border: 1px solid $main_color
+textarea
+	height: 100px
+	resize: none
+#callback_form
+	max-width: 400px
+	margin: auto
+	background-color: #FFF
+	padding: 10px 
+	text-align: center
+	border: 4px $main_color solid
+	border-radius: 5px
+	position: relative
+	button
+		font-size: 12px
+		border-radius: 0
+		padding: 12px 22px
+		&.mfp-close
+			font-size: 30px
+			position: absolute
+			top: -15px
+			right: 4px
+			color: #555
+			&:hover
+				color: $main_color
+	h3
+		font-size: 20px
+		color: $main_color
