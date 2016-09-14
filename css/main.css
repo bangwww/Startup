@@ -787,8 +787,8 @@ textarea::-moz-placeholder {
   text-transform: uppercase;
 }
 
-input::-webkit-placeholder,
-textarea::-webkit-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
